@@ -39,7 +39,7 @@ async function sendFollowUps() {
   for (const app of followUpsNeeded) {
     try {
       await transporter.sendMail({
-        from: `"Delali" <${process.env.EMAIL_USER}>`,
+        from: `"Elliot Datsomor" <${process.env.EMAIL_USER}>`,
         to: app.recruiterEmail,
         subject: `Follow-up on ${app.role} Application`,
         text: followUpTemplate(app)

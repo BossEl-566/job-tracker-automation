@@ -10,7 +10,7 @@ I remain very interested in the opportunity and would love to know if there are 
 Thank you for your time and consideration.
 
 Kind regards,
-Delali
+Elliot Datsomor
 `;
 }
 
