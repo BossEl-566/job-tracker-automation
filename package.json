@@ -12,6 +12,7 @@
   "type": "commonjs",
   "dependencies": {
     "dotenv": "^17.2.3",
+    "fs-extra": "^11.3.3",
     "nodemailer": "^7.0.12",
     "rss-parser": "^3.13.0"
   }
