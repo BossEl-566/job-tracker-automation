@@ -1,16 +1,17 @@
 const fetchJobs = require("./jobFetcher");
+const saveJobs = require("./jobSaver");
+const sendJobAlert = require("./jobAlertMailer");
 
 (async () => {
-  const jobs = await fetchJobs();
+  console.log("🔍 Checking for new jobs...");
 
-  if (jobs.length === 0) {
-    console.log("❌ No matching jobs found.");
+  const jobs = await fetchJobs();
+  const newJobs = await saveJobs(jobs);
+
+  if (newJobs.length === 0) {
+    console.log("✅ No new jobs found.");
   } else {
-    console.log(`🔥 Found ${jobs.length} matching jobs:\n`);
-    jobs.forEach(job => {
-      console.log(`• ${job.title}`);
-      console.log(`  Source: ${job.source}`);
-      console.log(`  Link: ${job.link}\n`);
-    });
+    console.log(`🔥 ${newJobs.length} new jobs saved.`);
+    await sendJobAlert(newJobs);
   }
 })();
