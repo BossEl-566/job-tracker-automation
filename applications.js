@@ -1307,5 +1307,16 @@ module.exports = [
     "status": "not_applied",
     "followUpSent": false,
     "dateAdded": "2026-01-11"
+  },
+  {
+    "company": "WeWorkRemotely",
+    "role": "Jiga: Full Stack Product Engineer",
+    "recruiterName": "Not specified",
+    "recruiterEmail": "not_available",
+    "link": "https://weworkremotely.com/remote-jobs/jiga-full-stack-product-engineer",
+    "dateApplied": null,
+    "status": "not_applied",
+    "followUpSent": false,
+    "dateAdded": "2026-01-12"
   }
 ]
